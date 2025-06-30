@@ -2,31 +2,33 @@
 This project applies machine learning to predict delivery delays in e-commerce and explores how these predictions can improve customer satisfaction. Using the Olist dataset from Brazil, five ML models are compared with a focus on both predictive performance and business actionability. The study also proposes an integrated fulfilment workflow that embeds predictive insights into customer service and logistics operations.
 
 📌 Problem Statement
-Delivery delays are a key driver of dissatisfaction in e-commerce. Yet, many platforms—including Olist—lack predictive tools to flag at-risk orders in advance. This project addresses that gap by:
 
-Predicting which orders are likely to be delayed
+Delivery delays are a key driver of dissatisfaction in e-commerce. However, many platforms—including Olist—lack predictive tools to flag at-risk orders in advance. This project addresses that gap by:
 
-Comparing five ML models: Logistic Regression, Random Forest, XGBoost, LSTM, and KNN
+1. Predicting which orders are likely to be delayed
 
-Using SHAP for feature interpretation
+2. Comparing five ML models: Logistic Regression, Random Forest, XGBoost, LSTM, and KNN
 
-Translating predictions into operational improvements that reduce complaints and improve review scores
+3. Using SHAP for feature interpretation
+
+4. Translating predictions into operational improvements that reduce complaints and improve review scores
 
 🧠 Technical Highlights
-Models: Logistic Regression (baseline), Random Forest (best performance), XGBoost (best interpretability), LSTM, and KNN
 
-Evaluation Metrics: F1 score, ROC-AUC, accuracy
+1. Models: Logistic Regression (baseline), Random Forest (best performance), XGBoost (best interpretability), LSTM, and KNN
+
+2. Evaluation Metrics: F1 score, ROC-AUC, accuracy
 ✳️ F1 and AUC were prioritised due to class imbalance (92% on-time vs 8% delayed orders)
 
-Model Evaluation:
+3. Model Evaluation:
 All models were trained using 5-fold cross-validation on the training set.
 The test set (20%) was held out and only used for final evaluation to ensure generalisation validity.
 
-Best Model: Random Forest (AUC = 0.846, F1 = 0.422)
+4. Best Model: Random Forest (AUC = 0.846, F1 = 0.422)
 
-Interpretability: SHAP values reveal key drivers such as promised_shipping_days, freight_value, and customer_state
+5. Interpretability: SHAP values reveal key drivers such as promised_shipping_days, freight_value, and customer_state
 
-Business Mechanism: Predictive signals support proactive customer communication and dispatch prioritisation
+6. Business Mechanism: Predictive signals support proactive customer communication and dispatch prioritisation
 
 ⚖️ Class Imbalance Handling
 The dataset is highly imbalanced, with delayed orders representing only 8% of the total. To mitigate this:
